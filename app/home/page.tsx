@@ -1,8 +1,10 @@
 "use client";
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function ExpenseSummary() {
   const [activeTab, setActiveTab] = useState("friends");
+  const router = useRouter();
 
   // Sample data
   const summaryData = {
@@ -338,7 +340,10 @@ export default function ExpenseSummary() {
 
       {/* Floating Action Button */}
       <div className="fixed bottom-6 right-6">
-        <button className="w-14 h-14 rounded-full bg-emerald-500 text-white shadow-lg flex items-center justify-center">
+        <button
+          className="w-14 h-14 rounded-full bg-emerald-500 text-white shadow-lg flex items-center justify-center"
+          onClick={() => router.push("/add-expense")}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-8 w-8"

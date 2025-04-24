@@ -227,6 +227,7 @@ const EnhancedCongratulationsPage: React.FC = () => {
               className="w-full bg-black text-white py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
+              onClick={() => (window.location.href = "/home")}
             >
               Back to Dashboard
             </motion.button>
@@ -234,6 +235,7 @@ const EnhancedCongratulationsPage: React.FC = () => {
               className="w-full bg-gray-100 text-gray-800 py-3 rounded-lg font-medium hover:bg-gray-200 transition-colors"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
+              onClick={() => (window.location.href = "/add-expense")}
             >
               Start New Split
             </motion.button>
