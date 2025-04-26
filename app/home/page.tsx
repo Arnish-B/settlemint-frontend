@@ -10,7 +10,7 @@ export default function ExpenseSummary() {
   const summaryData = {
     totalOwedToYou: 1250,
     totalYouOwe: 850,
-    netBalance: 400, // Positive means others owe you more
+    netBalance: 400,
     currency: "₹",
   };
 
