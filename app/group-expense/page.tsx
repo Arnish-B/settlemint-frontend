@@ -1,8 +1,10 @@
 "use client";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function GroupPage() {
   const [groupName, setGroupName] = useState("Weekend Trip");
+  const router = useRouter();
 
   // Sample group members data
   const members = [
@@ -118,7 +120,10 @@ export default function GroupPage() {
             <p className="text-sm text-gray-500">You are owed</p>
             <p className="text-xl font-bold text-emerald-600">$30.00</p>
           </div>
-          <button className="bg-emerald-600 text-white px-4 py-2 rounded-lg text-sm font-medium">
+          <button
+            className="bg-emerald-600 text-white px-4 py-2 rounded-lg text-sm font-medium"
+            onClick={() => router.push("/settle-up")}
+          >
             Settle Up
           </button>
         </div>
